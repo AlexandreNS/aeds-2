@@ -243,59 +243,6 @@ void testes(){
         exclui_conjunto(A);
         exclui_conjunto(B);
 
-    // --------------------------------------------------------------------------------------------------------------
-
-    // A = {-3, -4, -5, -6} e B = {-7, -8, -9} INTERSECAO
-        // Inteiros *A, *B, *I_AB;
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = -6; i < -2; i++) insere_elemento_conjunto(A, i);
-        for (int i = -9; i < -6; i++) insere_elemento_conjunto(B, i);
-
-        I_AB = intersecao_conjunto(A, B);
-
-        printf("\nTeste_INTERSECAO_2\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(I_AB);
-        printf("\n");
-
-        exclui_conjunto(I_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
-
-    // ----------------------------------------------------------------------------------------------------------------
-
-        // A = {1,2,3,4,5} e B = {3,4,5} INTERSECAO
-        // Inteiros *A, *B, *I_AB;
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = 1; i < 6; i++){
-            insere_elemento_conjunto(A, i);
-            insere_elemento_conjunto(B, i);
-        }
-        for (int i = 1; i < 3; i++) remove_elemento_conjunto(B, i);
-
-        I_AB = intersecao_conjunto(A, B);
-
-        printf("\nTeste_INTERSECAO_3\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(I_AB);
-        printf("\n");
-
-        exclui_conjunto(I_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
-
-    // -----------------------------------------------------------------------------------------------------------------
-
         // A = { x | x é inteiro e -1 < x < 2} e B = {1,2,3,4} UNIAO
         A = cria_conjunto();
         B = cria_conjunto();
@@ -317,43 +264,12 @@ void testes(){
         exclui_conjunto(A);
         exclui_conjunto(B);
 
-    // -----------------------------------------------------------------------------------------------------------------
-
-        // A = {1,2,3} e B = {1,2,3,4,5} UNIAO
-
+        // A = {1,2,3} e B = {1,2,3,4,5} DIFERENCA
         A = cria_conjunto();
         B = cria_conjunto();
 
         for (int i = 1; i < 4; i++) insere_elemento_conjunto(A, i);
         for (int i = 1; i < 6; i++) insere_elemento_conjunto(B, i);
-
-        U_AB = uniao_conjunto(A, B);
-
-        printf("\nTeste_UNIAO_2\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(U_AB);
-        printf("\n");
-
-        exclui_conjunto(U_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
-
-        // A = {1,2,3,4,5} e B = {3,4,5,6,7} DIFERENCA
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = 1; i < 8; i++) {
-            insere_elemento_conjunto(A, i);
-            insere_elemento_conjunto(B, i);
-        }
-        remove_elemento_conjunto(A, 6);
-        remove_elemento_conjunto(A, 7);
-
-        remove_elemento_conjunto(B, 1);
-        remove_elemento_conjunto(B, 2);
 
         D_AB = diferenca_conjunto(A, B);
 
@@ -369,67 +285,4 @@ void testes(){
         exclui_conjunto(A);
         exclui_conjunto(B);
 
-        // A = {1,2,3,4,5} e B = {8,9,10} DIFERENCA
-
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = 1; i < 6; i++) insere_elemento_conjunto(A, i);
-        for (int i = 8; i < 11; i++) insere_elemento_conjunto(B, i);
-
-        D_AB = diferenca_conjunto(A, B);
-
-        printf("\nTeste_DIFERENCA_2\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(D_AB);
-        printf("\n");
-
-        exclui_conjunto(D_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
-
-        // A = {1,2,3} e B = {1,2,3,4,5} DIFERENCA
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = 1; i < 4; i++) insere_elemento_conjunto(A, i);
-        for (int i = 1; i < 6; i++) insere_elemento_conjunto(B, i);
-
-        D_AB = diferenca_conjunto(A, B);
-
-        printf("\nTeste_DIFERENCA_3\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(D_AB);
-        printf("\n");
-
-        exclui_conjunto(D_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
-
-        // A = {1,2,3,4,5,6} e B = {5,6} DIFERENCA
-        A = cria_conjunto();
-        B = cria_conjunto();
-
-        for (int i = 1; i < 7; i++) insere_elemento_conjunto(A, i);
-        for (int i = 5; i < 7; i++) insere_elemento_conjunto(B, i);
-
-        D_AB = diferenca_conjunto(A, B);
-
-        printf("\nTeste_DIFERENCA_4\n\n");
-        imprimi_conjunto(A);
-        printf("\n");
-        imprimi_conjunto(B);
-        printf("\n");
-        imprimi_conjunto(D_AB);
-        printf("\n");
-
-        exclui_conjunto(D_AB);
-        exclui_conjunto(A);
-        exclui_conjunto(B);
 }
