@@ -141,7 +141,7 @@ Inteiros* diferenca_conjunto(Inteiros *a, Inteiros *b){
         remove_elemento_conjunto(a_cpy, b_cpy->conjunto[i]);
     }
     Inteiros *diferenca;
-    diferenca = cria_conjunto();
+    exclui_conjunto(b_cpy);
     diferenca = a_cpy;
     return diferenca;
 }
