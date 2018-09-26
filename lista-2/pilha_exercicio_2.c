@@ -16,11 +16,6 @@ int main(int argc, char const *argv[]){
   return 0;
 }
 
-void formataString(char texto[]){
-  int len = strlen(texto);
-  if(texto[len-1] == '\n') texto[len-1] = 0;
-}
-
 int palindromo(char palavra[]){
   formataString(palavra);
 
@@ -34,4 +29,9 @@ int palindromo(char palavra[]){
     if (c != palavra[i]) return 0;
   }
   return 1;
+}
+
+void formataString(char texto[]){
+  int len = strlen(texto);
+  if(texto[len-1] == '\n') texto[len-1] = 0;
 }

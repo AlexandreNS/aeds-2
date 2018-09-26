@@ -17,10 +17,6 @@ int main(int argc, char const *argv[]){
   return 0;
 }
 
-void formataString(char texto[]){
-  int len = strlen(texto);
-  if(texto[len-1] == '\n') texto[len-1] = 0;
-}
 void inverte_string(char entrada[], char saida[]){
   formataString(entrada);
 
@@ -38,4 +34,8 @@ void inverte_string(char entrada[], char saida[]){
   while(!pilhaVazia(caracteres)){
     desempilha(caracteres, &saida[strlen(saida)]);
   }
+}
+void formataString(char texto[]){
+  int len = strlen(texto);
+  if(texto[len-1] == '\n') texto[len-1] = 0;
 }
