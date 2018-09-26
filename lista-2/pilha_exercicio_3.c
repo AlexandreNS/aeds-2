@@ -1,24 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pilhaDinamica_int.c"
+#include "libs/pilhaDinamica_float.c"
 
-int min_max_media(Pilha*, int*, int*, int*);
-void preen
+int min_max_media(Pilha*, float*, float*, float*);
 
 int main(int argc, char const *argv[]){
+  int count;
+  float temp;
+  Pilha *pilha = criaPilha();
 
+  printf("Quantos numeros deseja inserir:\n");
+  scanf("%d", &count);
+  setbuf(stdin, NULL);
+
+  for(int i = 0; i < count; i++){
+
+    printf("Digite o %d° numero\n", i+1);
+    scanf("%f", &temp);
+    empilha(pilha, temp);
+    setbuf(stdin, NULL);
+
+  }
+
+  float min, max, media;
+  if(min_max_media(pilha, &min, &max, &media)){
+    printf("Resultado\n");
+    printf("\tMenor: %f\n", min);
+    printf("\tMaior: %f\n", max);
+    printf("\tMedia: %f\n", media);
+  }
   return 0;
 }
 
-int min_max_media(Pilha *pilha, int* min, int* max, int* media){
+int min_max_media(Pilha *pilha, float* min, float* max, float* media){
   if(pilhaVazia(pilha)) return 0;
   else{
-    int count = 1, current, soma = 0;
+    int count = 1;
+    float current, soma = 0;
     desempilha(pilha, &current);
     soma += current;
     *min = current;
     *max = current;
-    while (!pilhaVazia(p)){
+    while (!pilhaVazia(pilha)){
       desempilha(pilha, &current);
       if(current > *max) *max = current;
       if(current < *min) *min = current;
@@ -26,5 +49,6 @@ int min_max_media(Pilha *pilha, int* min, int* max, int* media){
       count++;
     }
     *media = soma/count;
+    return 1;
   }
 }
