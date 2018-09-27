@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "libs/elemento_int.c"
 #include "libs/pilhaDinamica_int.c"
 
 void inverte_pilha(Pilha*);

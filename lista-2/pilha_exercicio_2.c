@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libs/elemento_char.c"
 #include "libs/pilhaDinamica_char.c"
 
 int palindromo(char[]);

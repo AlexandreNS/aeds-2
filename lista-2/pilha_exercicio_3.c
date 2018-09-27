@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "libs/elemento_float.c"
 #include "libs/pilhaDinamica_float.c"
 
 int min_max_media(Pilha*, float*, float*, float*);
