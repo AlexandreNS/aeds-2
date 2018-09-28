@@ -9,8 +9,8 @@ typedef struct FilaTag{
 Fila* criaFila();
 void liberaFila(Fila*);
 void excluirFila(Fila*);
-int inserir(Fila*, int);
-int retirar(Fila*, int*);
+int inserirFila(Fila*, int);
+int retirarFila(Fila*, int*);
 int filaVazia(Fila*);
 int filaCheia(Fila*);
 
@@ -28,7 +28,7 @@ void liberaFila(Fila* f){
   f->comeco = 0;
   f->final = 0;
 }
-int inserir(Fila* f, int v){
+int inserirFila(Fila* f, int v){
   if(filaCheia(f)) return 0;
   else{
     f->vetor[f->final] = v;
@@ -36,7 +36,7 @@ int inserir(Fila* f, int v){
     return 1;
   }
 }
-int retirar(Fila* f, int* v){
+int retirarFila(Fila* f, int* v){
   if(filaVazia(f)) return 0;
   else{
     *v = f->vetor[f->comeco];

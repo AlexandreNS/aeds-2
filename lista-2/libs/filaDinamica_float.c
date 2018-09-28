@@ -5,8 +5,8 @@ typedef struct FilaTag{
 
 Fila* criaFila();
 void liberaFila(Fila*);
-int inserirFila(Fila*, int);
-int retirarFila(Fila*, int*);
+int inserirFila(Fila*, float);
+int retirarFila(Fila*, float*);
 int filaVazia(Fila*);
 
 Fila* criaFila(){
@@ -23,7 +23,7 @@ void liberaFila(Fila* f){
     free(aux);
   }
 }
-int inserirFila(Fila* f, int v){
+int inserirFila(Fila* f, float v){
   Elemento *e = (Elemento*)malloc(sizeof(Elemento));
   e->valor = v;
   e->proximo = NULL;
@@ -33,7 +33,7 @@ int inserirFila(Fila* f, int v){
 
   f->final = e;
 }
-int retirarFila(Fila* f, int* v){
+int retirarFila(Fila* f, float* v){
   if(filaVazia(f)) return 0;
   else{
     *v = f->inicio->valor;

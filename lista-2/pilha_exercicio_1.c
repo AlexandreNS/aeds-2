@@ -8,9 +8,9 @@ void inverte_string(char[], char[]);
 void formataString(char[]);
 
 int main(int argc, char const *argv[]){
-  char texto_entrada[50], texto_saida[50];
+  char texto_entrada[100], texto_saida[100];
   printf("Digite uma String para inverter palavra por palavra:\n\t");
-  fgets(texto_entrada, 49, stdin);
+  fgets(texto_entrada, 99, stdin);
   setbuf(stdin, NULL);
 
   inverte_string(texto_entrada, texto_saida);
@@ -20,6 +20,7 @@ int main(int argc, char const *argv[]){
 
 void inverte_string(char entrada[], char saida[]){
   formataString(entrada);
+  memset (saida,'\0',100); // zerar todos os valores da String
 
   Pilha *caracteres = criaPilha();
   for (int i = 0; entrada[i] != '.' && entrada[i] != '\0' ; i++) {

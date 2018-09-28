@@ -3,8 +3,8 @@
 #include "libs/elemento_int.c"
 #include "libs/pilhaDinamica_int.c"
 #include "libs/filaDinamica_int.c"
-
-void inverte_fila(Fila*);
+// Faz a mesma coisa que o "pilha_exercicio_6.c"
+void reverso(Fila*);
 
 int main(int argc, char const *argv[]){
   int count;
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]){
   }
 
   printf("\n");
-  inverte_fila(fila_teste);
+  reverso(fila_teste);
 
   while (!filaVazia(fila_teste)) {
     retirarFila(fila_teste, &temp);
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[]){
   return 0;
 }
 
-void inverte_fila(Fila* fila){
+void reverso(Fila* fila){
   Pilha *pilha = criaPilha();
   int temp;
   while(!filaVazia(fila)){
