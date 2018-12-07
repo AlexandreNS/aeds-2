@@ -66,7 +66,6 @@ void intercala_matricula(Pessoa a[], int n)
   i = 0;
   j = meio;
   k = 0;
-
   while (i < meio && j < n){
     if (a[i].matricula < a[j].matricula){
       tmp[k].matricula = a[i].matricula;
@@ -78,15 +77,12 @@ void intercala_matricula(Pessoa a[], int n)
     ++k;
   }
   if (i == meio) {
-
     while (j < n) {
       tmp[k].matricula = a[j].matricula;
       ++j;
       ++k;
     }
-
   } else {
-
     while (i < meio) {
       tmp[k].matricula = a[i].matricula;
       ++i;

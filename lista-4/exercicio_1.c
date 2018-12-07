@@ -27,7 +27,7 @@ int main(int argc, char const *argv[]){
 void insertion_vector(int *a, int n, int v){
   a = (int*)realloc(a, (n+1)*sizeof(int));
   int i = n-1;
-  while(a[i] > v && i >= -1){
+  while(a[i] > v && i > -1){
     a[i+1] = a[i];
     i--;
   }
