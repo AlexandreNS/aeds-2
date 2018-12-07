@@ -1,0 +1,2 @@
+Não, pelo metodo mergeSort que apresenta o melhor dos piores casos: n*log2(n) comparações.
+Teriamos aproximadamente no maximo 16 comparações e não 8.
